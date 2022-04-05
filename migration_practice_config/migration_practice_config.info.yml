@@ -1,0 +1,20 @@
+name: 'Migrate by practice Configurations files'
+type: module
+description: 'Suite of configuration file to carry out the training Drupal 9 migration by practice'
+core_version_requirement: ^8.9.1 || ^9
+package: 'Migrate Practice'
+dependencies:
+  - drupal:system
+  - drupal:user
+  - drupal:taxonomy
+  - drupal:syslog
+  - drupal:media_library
+  - drupal:media
+  - drupal:image
+  - drupal:node
+  - drupal:text
+  - drupal:file
+  - drupal:datetime
+  - drupal:path
+  - drupal:field
+  - drupal:telephone

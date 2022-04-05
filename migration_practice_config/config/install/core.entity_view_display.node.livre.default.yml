@@ -1,0 +1,140 @@
+status: true
+dependencies:
+  config:
+    - field.field.node.livre.body
+    - field.field.node.livre.field_annee_d_edition
+    - field.field.node.livre.field_auteurs
+    - field.field.node.livre.field_couverture
+    - field.field.node.livre.field_isbn
+    - field.field.node.livre.field_liens
+    - field.field.node.livre.field_maison_d_edition
+    - field.field.node.livre.field_mouvement_litteraire
+    - field.field.node.livre.field_nombre_de_page
+    - field.field.node.livre.field_pdf
+    - field.field.node.livre.field_sous_titre
+    - field.field.node.livre.field_tags
+    - field.field.node.livre.field_traducteur
+    - node.type.livre
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.livre.default
+targetEntityType: node
+bundle: livre
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_annee_d_edition:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_auteurs:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_couverture:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_isbn:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_liens:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_maison_d_edition:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_mouvement_litteraire:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_nombre_de_page:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_pdf:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_sous_titre:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_traducteur:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  langcode: true
+  links: true
